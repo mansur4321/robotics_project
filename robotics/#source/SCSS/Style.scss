@@ -1,0 +1,1021 @@
+@import "nullStyle.scss";
+$maxWidth: 1200;
+@import "adaptivTextStyle.scss";
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+.container {
+	max-width: #{$maxWidth + px};
+	margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+
+	img.up {
+		max-width: 30px;
+		border: 2px solid #000;
+		border-radius: 50px;
+		position: fixed;
+		left: 93%;
+		top: 100%;
+		transition: 0.3s;
+		padding: 3px;
+	}
+		
+	nav.header__nav {
+		position: fixed;
+		bottom: 100%;
+		padding-top: 15px;
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		flex-direction: column;
+		background: #000;
+		height: 50%;
+		transition: 0.3px;
+		z-index: 1;
+	}
+	a.header__menu {
+		&:hover {
+			color: #A6A6A6;
+			transition: 0.5s;
+		}
+		&_game {
+			padding: 10px 10px 9px;
+			border: 2px solid #fff;
+			border-radius: 50px;
+			@include adaptiv-font(16, 14);
+			&:hover {
+				color: #fff;
+				@include adaptiv-font(15, 13);
+				transition: 0.3s;
+			}
+		}
+		&_signUp {
+			color: #000;
+			background: #fff;
+			border-radius: 50px;
+			padding: 10px 10px 9px;
+			@include adaptiv-font(16, 14);
+			&:hover {
+				@include adaptiv-font(15, 11.5);
+				color: #000;
+				transition: 0.3s;
+
+			}
+		}
+	}	
+
+	.header__logo {
+		margin: -20px 0px 40px 0px;
+		display: flex;
+		align-items: center;
+		.header__logo_menu {
+			margin: 20px 0px 0px 0px;
+			z-index: 2;
+		}
+		.header__logo_image {
+			max-width: 40px;
+			margin-right: 5px;
+		}
+		.header__logo_name {
+			font-weight: bold;
+			z-index: 2;
+			@include adaptiv-font(17, 12);
+			color: #000;
+			&-yellow {
+				color: #fff;
+			}
+		}
+	}
+
+	.header__age {
+		margin-bottom: 40px;
+		a.header__age_min {
+			transition: 0.3s;
+			@include adaptiv-font(25, 15);
+			color: #000;
+			border: 3px solid #000;
+			background: #65C4FB;
+			padding: 7px 15px 6px;
+			border-radius: 40px;
+			margin-right: 5px;
+			&:hover {
+				@include adaptiv-font(23, 13);
+				transition: 0.3s;
+			}
+		}
+
+		a.header__age_max {
+			transition: 0.3s;
+			@include adaptiv-font(25, 15);
+			padding: 7px 10px 6px;
+			border-radius: 40px;
+			color: #65C4FB;
+			border: 3px solid #65C4FB;
+			background: #000;
+			box-shadow: 0 0 5px #000;
+			margin-top: 10px;
+			&:hover {
+				@include adaptiv-font(23, 13);
+				transition: 0.3s;
+			}
+		}
+	}
+
+	a.header__button {
+		@include adaptiv-font(27, 17.5);
+		padding: 9px 17px 8px;
+		border-radius: 50px;
+		transition: 0.3s;
+		margin: 0px 0px 0px 20px;
+		a.header__button_signUp {
+			color: #fff;
+			background: #000;
+		}
+
+		a.header__button_game {
+			color: #000;
+			background: #65C4FB;
+			border: 2px solid #000;
+		}
+	}
+		section.program {
+		padding: 100px 0px 0px 3%;
+
+	}
+
+	div.program__lesson {
+		margin: 0px 0px 0px 5%;
+	}
+
+	div.program__lesson:last-child {
+		margin: 0px 0px -80px 5%;
+	}
+
+	div.program__lesson__level {
+		width: 20%;
+		padding-right: 10px;
+		div.program__lesson__level:first-child {
+			width: 5%;
+		}
+		div.program__lesson__level_number {
+			font-weight: bold;
+			margin-top: -5px;
+			white-space: pre;
+		}			
+		img.program__lesson__level_image {
+			max-width: 20px;
+			max-height: 20px;
+			position: relative;
+			top: -25px;
+			left: 100%;
+			z-index: 1;
+		}
+	}
+
+	div.game {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: center;
+		width: 50%;
+		padding-left: 60%;
+		canvas.game__canvas {
+			width: 250px;
+			height: 250px;
+		}
+		&__controllers {
+		    display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+		 	margin: -260px 0px 0px -255px;
+		    button.game__controllers__button {
+			    height: 25px;
+			    margin: 5px 0;
+			    padding: 6px 8px 5px;
+			    color: #fff;
+			    background: #65C4FB;
+			    border-radius: 30px;
+			}
+		}
+	}
+
+	div.support__title {
+		margin-bottom: 30px;
+	}
+
+	div.support__input {
+		margin-bottom: 30px;
+	}
+
+	a.support__btn {
+		margin-bottom: 30px;
+	}
+
+	img.footer__logo_img {
+		margin-right: 5px;
+	}
+	a.footer__menu {
+		margin-right: 5px;
+	}
+
+}
+
+@media (max-width: 457px) {
+
+	img.up {
+		max-width: 30px;
+		border: 2px solid #000;
+		border-radius: 50px;
+		position: fixed;
+		left: 85%;
+		top: 100%;
+		transition: 0.3s;
+		padding: 3px;
+	}
+
+	.header__logo {
+		margin: -20px 0px 20px 0px;
+		display: flex;
+		align-items: center;
+		
+		.header__logo_menu {
+			margin: 20px 0px -30px 0px;
+		}
+		.header__logo_image {
+			max-width: 40px;
+			margin-right: 5px;
+		}
+		.header__logo_name {
+			font-weight: bold;
+			@include adaptiv-font(17, 12);
+			color: #000;
+			&-yellow {
+				color: #fff;
+			}
+		}
+	}
+
+	div.header__age {
+		margin-bottom: 20px;
+		display: flex;
+		flex-direction: column;
+		a.header__age_min {
+			transition: 0.3s;
+			@include adaptiv-font(25, 15);
+			color: #000;
+			border: 3px solid #000;
+			background: #65C4FB;
+			padding: 7px 15px 6px;
+			border-radius: 40px;
+			margin-right: 5px;
+			&:hover {
+				@include adaptiv-font(23, 13);
+				transition: 0.3s;
+			}
+		}
+
+		a.header__age_max {
+			transition: 0.3s;
+			@include adaptiv-font(25, 15);
+			padding: 7px 10px 6px;
+			border-radius: 40px;
+			color: #65C4FB;
+			border: 3px solid #65C4FB;
+			background: #000;
+			box-shadow: 0 0 5px #000;
+			margin-top: 10px;
+			&:hover {
+				@include adaptiv-font(23, 13);
+				transition: 0.3s;
+			}
+		}
+	}
+
+	h1.header__title {
+		@include adaptiv-font(54, 28);
+		margin-bottom: 15px;
+		text-align: center;
+	}
+
+	div.header__text {
+		@include adaptiv-font(25, 17);
+		line-height: 1.3;
+		max-width: 500px;
+		text-align: center;
+		margin: 50px auto;
+	}
+
+	div.header__btn {
+		padding: 30px 0px 50px 0px;
+	}
+
+	a.header__button {
+		@include adaptiv-font(27, 17.5);
+		padding: 9px 17px 8px;
+		border-radius: 50px;
+		transition: 0.3s;
+		margin: 0px 0px 0px 20px;
+		a.header__button_signUp {
+			color: #fff;
+			background: #000;
+		}
+
+		a.header__button_game {
+			color: #000;
+			background: #65C4FB;
+			border: 2px solid #000;
+		}
+	}
+
+	section.whyAr {
+		flex-direction: column;
+		margin-bottom: 100px;
+		div.whyAr__title {
+			margin-bottom: 40px;
+			text-align: center;
+		}
+		div.whyAr__text {
+			text-align: center;
+		}
+	}
+
+	section.project>.container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	div.project__columnLeft {
+		width: 100%;
+	}
+
+	img.project__image {
+		margin: 50px 0px 0px 0px;
+		max-width: 100%;
+		border-radius: 50px;
+	}
+
+	section.program {
+		padding: 100px 0px 0px 3%;
+
+	}
+
+	div.program__lesson {
+		margin: 0px 0px 0px 7%;
+	}
+
+	div.program__lesson:last-child {
+		margin: 0px 0px -80px 7%;
+	}
+
+	div.program__lesson__level {
+		width: 30%;
+		padding-right: 10px;
+		div.program__lesson__level_number {
+			font-weight: bold;
+			margin-top: -5px;
+			white-space: pre;
+		}			
+		img.program__lesson__level_image {
+			max-width: 15px;
+			max-height: 15px;
+			position: relative;
+			top: -25px;
+			left: 110%;
+			z-index: 1;
+		}
+	}
+
+	div.game {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: center;
+		width: 50%;
+		padding-left: 100%;
+		canvas.game__canvas {
+			width: 250px;
+			height: 250px;
+		}
+		&__controllers {
+		    display: flex;
+		    justify-content: center;
+		 	padding: -260px 0px 0px -255px;
+		    button.game__controllers__button {
+			    height: 25px;
+			    margin: 5px 5px;
+			    padding: 5px 6px 4px;
+			    color: #fff;
+			    background: #65C4FB;
+			    border-radius: 30px;
+			}
+		}
+	}
+
+	div.support__title {
+		margin-bottom: 20px;
+	}
+
+	textarea.support__input {
+		margin-bottom: 20px;
+	}
+
+	a.support__btn {
+		margin-bottom: 20px;
+		padding: 7px 10px 6px;
+	}
+
+	footer.footer {
+		height: 100px;
+
+		div.footer__logo {
+			justify-content: space-evenly;
+			width: 100%;
+		}
+
+		div.footer__nav {
+			width: 100%;
+
+		}
+	}
+
+	footer.footer>.container {
+		flex-direction: column;
+		justify-content: space-evenly;
+		height: 80px;
+	}
+}
+
+
+.up {
+	max-width: 40px;
+	border: 2px solid #000;
+	border-radius: 50px;
+	position: fixed;
+	left: 93%;
+	top: 100%;
+	transition: 0.3s;
+	padding: 3px;
+}
+
+.menu {
+	background: #000;
+	position: fixed;
+	width: 100%;
+	height: 90px;
+	bottom: 100%;
+	transition: 0.3s;
+	z-index: 3;
+}
+
+.header {
+	background: #65C4FB;
+	width: 100%;
+	margin-bottom: 150px;
+	box-shadow: 0 0 15px #65C4FB;
+	transition: 0.3s;
+	.menu>.container {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__nav {
+		padding-top: 15px;
+		width: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		transition: 0.3s;
+		z-index: 2;
+	}
+	&__menu {
+		&:hover {
+			color: #A6A6A6;
+			transition: 0.5s;
+		}
+		&_game {
+			padding: 10px 10px 9px;
+			border: 2px solid #fff;
+			border-radius: 50px;
+			&:hover {
+				color: #fff;
+				font-size: 15px;
+				transition: 0.3s;
+			}
+		}
+		&_signUp {
+			color: #000;
+			background: #fff;
+			border-radius: 50px;
+			padding: 10px 10px 9px;
+			@include adaptiv-font(16, 12);
+			&:hover {
+				@include adaptiv-font(15, 11.5);
+				color: #000;
+				transition: 0.3s;
+
+			}
+		}
+	}
+
+	&__insideBar {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 30px;
+	}
+
+	&__logo {
+		margin: -20px 0px 40px 0px;
+		display: flex;
+		align-items: center;
+
+		&_menu {
+			margin: 20px 0px 0px 0px;
+			z-index: 3;
+		}
+		&_image {
+			max-width: 50px;
+			margin-right: 5px;
+		}
+		&_name {
+			font-weight: bold;
+			@include adaptiv-font(17, 12);
+			color: #000;
+			z-index: 4;
+			&-yellow {
+				color: #fff;
+			}
+		}
+	}
+
+	&__age {
+		margin-bottom: 40px;
+		&_min {
+			transition: 0.3s;
+			@include adaptiv-font(25, 15);
+			color: #000;
+			border: 3px solid #000;
+			background: #65C4FB;
+			padding: 10px 22px 9px;
+			border-radius: 40px;
+			margin-right: 15px;
+			white-space: pre;
+			&:hover {
+				@include adaptiv-font(23, 13);
+				transition: 0.3s;
+			}
+		}
+
+		&_max {
+			transition: 0.3s;
+			@include adaptiv-font(25, 15);
+			padding: 10px 15px 9px;
+			border-radius: 40px;
+			color: #65C4FB;
+			border: 3px solid #65C4FB;
+			background: #000;
+			box-shadow: 0 0 5px #000;
+			white-space: pre;
+			&:hover {
+				@include adaptiv-font(23, 13);
+				transition: 0.3s;
+			}
+		}
+	}
+
+	&__title {
+		@include adaptiv-font(54, 28);
+		margin-bottom: 35px;
+		text-align: center;
+	}
+
+	&__text {
+		@include adaptiv-font(25, 17);
+		line-height: 1.3;
+		max-width: 500px;
+		text-align: center;
+		margin: 50px auto;
+	}
+
+	&__btn {
+		padding: 50px 0px 80px 0px;
+	}
+
+	&__button {
+		@include adaptiv-font(27, 17.5);
+		padding: 12px 25px 11px;
+		border-radius: 50px;
+		transition: 0.3s;
+		margin: 0px 0px 0px 50px;
+		&_signUp {
+			color: #fff;
+			background: #000;
+		}
+
+		&_game {
+			color: #000;
+			background: #65C4FB;
+			border: 2px solid #000;
+		}
+	}
+	
+	&__button:hover {
+		padding: 10px 20px 10px;
+		transition: 0.3s;
+		color: #B2B2B2;
+		@include adaptiv-font(27, 17);
+	}
+
+	&__button_game:hover {
+		color: #000;
+	}
+
+}
+
+.whyAr {
+	display: flex;
+	margin-bottom: 200px;
+	&__title {
+		width: 100%;
+		margin-right: 18%;
+		flex-shrink: 1.1;
+	}
+	&__text {
+		width: 100%;
+		flex-shrink: 1.2;
+	}
+
+}
+
+.project {
+	background: #65C4FB;
+	&__fon {
+		max-width: 100%;
+		z-index: -1;
+		&-top {
+		}
+		&-bottom {
+		}
+	}
+	&>.container {
+		display: flex;
+	}
+	&__columnLeft {
+		width: 100%;
+		margin-right: 10%;
+	}
+	&__image {
+		margin: 50px 0px 0px 20px;
+		max-width: 100%;
+		border-radius: 50px;
+	}
+	&__columnRight {
+		width: 100%;
+		padding: 50px 0px;
+	}
+	&__subtitle {
+		margin-bottom: 20px;
+	}
+	&__text {
+		margin-bottom: 50px;
+	}
+}
+
+.program {
+	padding: 100px 0px 0px 5%;
+	&__title {
+		margin-bottom: 80px;
+	}
+
+	&__lesson {
+		display: flex;
+		margin: 0px 0px 0px 7%;
+
+		&:last-child {
+			margin: 0px 0px -80px 7%;
+		}
+
+		&__level {
+			width: 10%;
+			&_number {
+				font-weight: bold;
+				margin-top: -5px;
+				white-space: pre;
+			}			
+			&_image {
+				max-width: 20px;
+				max-height: 20px;
+				position: relative;
+				top: -25px;
+				left: 93%;
+				z-index: 1;
+			}
+		}
+
+		&__plan {
+			padding: 0px 0px 80px 5%;
+
+			&_title {
+				margin-bottom: 30px;
+				max-width: 500px;
+			}
+
+			&_spisok {
+				margin-bottom: 20px;
+				@include adaptiv-font(18, 13.5);
+				line-height: 1.2;
+			}
+
+			&_row1 {
+				margin: 0px 0px 5px 20px;
+				&::before {
+					content: "";
+					background: #65C4FB;
+					border: 2px solid #1faaff;
+					border-radius: 50px;
+					padding: 4px 4px;
+					position: absolute;
+					margin: 3px 0px 0px -17px;;
+					z-index: -1;
+				}
+			}
+
+			&_row2 {
+				margin: 0px 0px 5px 20px;
+				&::before {
+					content: "";
+					background: #A55AE5;
+					border: 2px solid #8938CE;
+					border-radius: 50px;
+					padding: 4px 4px;
+					position: absolute;
+					margin: 3px 0px 0px -17px;;
+					z-index: -1;
+				}
+			}
+
+			&_video {
+				width: 20px;
+				margin: 30px 0px 0px 0px;
+				transition: 0.3s;
+			}
+
+			&_text {
+				font-weight: bold;
+				@include adaptiv-font(17, 13);
+				max-width: 500px;
+			}
+
+			.finalText {
+				font-weight: normal;
+				@include adaptiv-font(20, 15);
+				color: #65C4FB;
+			}
+		}
+
+		&__plan-color1 {
+			border-left: 3px solid #65C4FB;
+		}
+
+		&__plan-color2 {
+			border-left: 3px solid #A55AE5;
+		}
+
+		&__finalPlan {
+			border: 0px solid;
+		}
+	}
+}
+
+.minigame {
+	margin-top: 100px;
+	&__title {
+		margin: 0px 0px 50px 0px;
+		text-align: center;
+	}
+}
+
+.game {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	&__controllers {
+	    display: flex;
+	    flex-direction: column;
+	    justify-content: center;
+	    &__button {
+		    height: 30px;
+		    margin: 5px 0;
+		    padding: 10px 15px 9px;
+		    color: #fff;
+		    background: #65C4FB;
+		    border-radius: 30px;
+		}
+	}
+}
+
+
+.signUp {
+	display: flex;
+	flex-direction: column;
+	max-width: 600px;
+	margin: 0 auto;
+	align-items: center;
+	border-radius: 30px;
+	background: #65C4FB;
+	margin-bottom: 100px;
+	margin-top: 100px;
+	&__input {
+		border-bottom: 1.5px solid #717171;
+		margin-bottom: 30px;
+		width: 70%;
+		@include adaptiv-font(18, 13.5);
+		padding: 7px 5px;
+		border-radius: 10px;
+		color: #818181;
+	}
+	&__title {
+		font-weight: bold;
+		margin: 30px 0px 50px 0px;
+	}
+	&__btn {
+		color: #65C4FB;
+		@include adaptiv-font(20, 15);
+		padding: 10px 15px 9px;
+		background: #fff;
+		border-radius: 20px;
+		margin: 50px 0px 40px;
+		&:hover {
+			@include adaptiv-font(19, 14.5);
+			transition: 0.2s;
+		}
+	}
+}
+
+.footer {
+	width: 100%;
+	height: 50px;
+	background: #000;
+	&>.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 10px;
+	}
+	&__logo {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 20%;
+		&_img {
+			max-width: 25px;
+			max-height: 25px;
+			border-radius: 50px;
+			background: #414141;
+			padding: 5px 4px;
+			&:hover {
+				background: #fff;
+				transition: 0.3s;
+			}
+			&-fb {
+				padding: 2px 5px;
+			}
+			&-tw {
+				padding: 5.5px 3.5px;
+			}
+			&-vk {
+				padding: 8px 4px;
+			}
+			&-inst {
+				padding: 5.5px 3.5px;
+			}
+		}
+	}
+
+	&__nav {
+		width: 40%;
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	&__menu {
+		&:hover {
+			color: #A6A6A6;
+			transition: 0.3s; 
+		}
+	}
+}
+
+.support {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	margin: 0 auto;
+	border: 3px solid #65C4FB;
+	box-shadow: 0px 0px 5px #65C4FB;
+	border-radius: 20px;
+	position: fixed;
+	top: 100%;
+	left: 25%;
+	background: #fff;
+	z-index: 3;
+	transition: 0.3s;
+	&__title {
+		text-align: center;
+		margin: 20px 0px 50px 0px;
+	}
+	&__input {
+		@include adaptiv-font(18, 13.5);
+		margin: 0px  20px 50px;
+		border-radius: 15px;
+		padding: 10px;
+		border: 1px solid #717171;
+	}
+	&__btn {
+		@include adaptiv-font(20, 15);
+		margin: 0 auto;
+		background: #65C4FB;
+		color: #fff;
+		box-shadow: 0px 0px 2px #65C4FB;
+		text-align: center;
+		padding: 10px 15px 9px;
+		border-radius: 30px;
+		margin-bottom: 50px;
+	}
+}
+
+.aboutUs {
+	max-height: 300px;
+	@include adaptiv-font(16, 12);
+	background: #000;
+	line-height: 1.2;
+	color: #fff;
+	text-align: center;
+	padding: 20px 10%;
+	position: fixed;
+	bottom: -100%;
+	transition: 0.3s;
+	z-index: 2;
+	&>span {
+		color: #717171;
+		@include adaptiv-font(18, 13);
+		font-style: italic;
+	}
+}
+
+
+.title {
+	font-weight: bold;
+	line-height: 1.3;
+	@include adaptiv-font(40, 24);
+}
+
+.subtitle {
+	font-weight: bold;
+	line-height: 1.3;
+	@include adaptiv-font(31, 19);
+}
+
+.text {
+	line-height: 1.4;
+	@include adaptiv-font(20, 15);
+
+}
+
+.textMenu {
+	color: #fff;
+	@include adaptiv-font(16, 12);
+	white-space: pre;
+}
+
+.twilight {
+	background: #000;
+	opacity: 0.3;
+	position: fixed;
+	z-index: 2;
+}
+
+.boorger {
+	position: fixed;
+	top: 5%;
+	max-width: 25px;
+	left: 90%;
+	z-index: 1;
+	transition: 0.3
+}
+
+.boorgerClose {
+	position: fixed;
+	top: 5%;
+	max-width: 25px;
+	left: 90%;
+	z-index: 1;
+	transition: 0.3
+}
+
+.videoClose {
+	margin: 20px 0px 0px 5px;	
+	max-width: 15px;
+}
+
+
